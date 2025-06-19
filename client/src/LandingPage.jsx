@@ -39,11 +39,11 @@ export default function LandingPage() {
 // … earlier useEffect and state logic …
 
 // Read from CRA env var, default to localhost:
-const BASE_URL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:3001';
+const BASE_URL = process.env.REACT_APP_API_URL;
 
 const handleDiscordLogin = () => {
   console.log('BACKEND URL:', BASE_URL);
-  window.location.href = `${BASE_URL}/auth/discord`;
+ window.location.href = `${BASE_URL}/auth/discord`;
 };
 
 

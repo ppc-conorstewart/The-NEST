@@ -18,8 +18,9 @@ export default function Header() {
   }, [])
 
   const onClickLogin = () => {
-    window.location.href = 'http://localhost:3001/auth/discord'
-  }
+  window.location.href = `${process.env.REACT_APP_BACKEND_URL}/auth/discord`;
+}
+
 
   const onClickLogout = () => {
     localStorage.removeItem('flyiq_user')

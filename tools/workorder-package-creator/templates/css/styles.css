@@ -1,0 +1,194 @@
+/* styles.css - placeholder for PDF generator styles */
+/* styles.css */
+
+/* --------------- PAGE SETUP --------------- */
+
+@page {
+  margin: 0; /* we'll control margins via the .page container */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  font-size: 10pt;
+  color: #000;
+  line-height: 1.2;
+}
+
+.page {
+  /* Each .page maps to one PDF page */
+  width: 8.5in;
+  height: 11in;
+  box-sizing: border-box;
+  padding: 0.5in; /* 0.5″ margin all around */
+  position: relative;
+  page-break-after: always;
+}
+
+/* Utility to force a page break */
+.page-break {
+  page-break-after: always;
+}
+
+/* Header area common to every page */
+.header-block {
+  width: 100%;
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 11pt;
+}
+
+/* Two-column layout for header fields */
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.header-left,
+.header-right {
+  display: inline-block;
+}
+
+.field-label {
+  font-weight: bold;
+}
+
+.field-value {
+  margin-left: 4px;
+}
+
+/* --------------- TABLE STYLES --------------- */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 8px;
+}
+
+th,
+td {
+  border: 1px solid #000;
+  padding: 4px;
+  font-size: 9pt;
+  vertical-align: top;
+}
+
+th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+  text-align: left;
+}
+
+/* Specific column widths for the Equipment List */
+.equip-col-count {
+  width: 10%;
+  text-align: center;
+}
+.equip-col-notes {
+  width: 15%;
+}
+.equip-col-desc {
+  width: 75%;
+}
+
+/* Style for “# Per Set / Total Min #” table */
+.perset-table th,
+.perset-table td {
+  text-align: center;
+}
+
+/* --------------- WORK ORDER TABLE --------------- */
+
+.workorder-table th,
+.workorder-table td {
+  border: 1px solid #000;
+  font-size: 9pt;
+  padding: 2px 4px;
+}
+
+.workorder-table .wo-item-col {
+  width: 6%;
+  text-align: center;
+}
+.workorder-table .qty-col {
+  width: 6%;
+  text-align: center;
+}
+.workorder-table .checkbox-col {
+  width: 8%;
+  text-align: center;
+}
+.workorder-table .desc-col {
+  width: 50%;
+}
+.workorder-table .ppc-col {
+  width: 20%;
+}
+
+/* Checkbox style: draw a 10×10px box and insert “X” if needed */
+.checkbox {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #000;
+  margin-right: 2px;
+  vertical-align: middle;
+}
+
+/* --------------- SIGNATURE BLOCK --------------- */
+
+.signature-block {
+  margin-top: 16px;
+  font-size: 9pt;
+}
+
+.signature-line {
+  width: 40%;
+  border-bottom: 1px solid #000;
+  display: inline-block;
+  margin-right: 16px;
+}
+
+/* --------------- PHOTO PLACEHOLDER --------------- */
+
+.photo-box {
+  width: 100%;
+  height: 2.5in; /* match sample’s photo area height */
+  border: 1px dashed #000;
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  font-style: italic;
+}
+
+/* --------------- BUILD PLAN GRID --------------- */
+
+.buildplan-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.buildplan-cell {
+  border: 1px solid #000;
+  padding: 4px;
+  font-size: 9pt;
+  text-align: center;
+}
+
+/* --------------- CHECKLIST --------------- */
+
+.checklist-item {
+  margin-bottom: 4px;
+  font-size: 9pt;
+}
+
+.checklist-item .checkbox {
+  margin-right: 4px;
+}

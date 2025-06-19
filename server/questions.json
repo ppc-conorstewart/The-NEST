@@ -1,0 +1,147 @@
+[
+  {
+    "id": 1,
+    "module": "Terminology",
+    "image": "/assets/module_1/male_quick_coupler.jpg",
+    "question": "Name this fitting.",
+    "answer": "Hydraulic Male Quick Coupler",
+    "options": [
+      {
+        "label": "A",
+        "text": "Hydraulic Female Coupler",
+        "correct": false
+      },
+      {
+        "label": "B",
+        "text": "Grease Nipple",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "Hydraulic Male Quick Coupler",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "Check Valve Plug",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "module": "Terminology",
+    "image": "/assets/module_1/female_quick_coupler.jpg",
+    "question": "Name this fitting.",
+    "answer": "Hydraulic Female Quick Coupler",
+    "options": [
+      {
+        "label": "A",
+        "text": "Hydraulic Female Coupler",
+        "correct": true
+      },
+      {
+        "label": "B",
+        "text": "Grease Nipple",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "Hydraulic Male Quick Coupler",
+        "correct": false
+      },
+      {
+        "label": "D",
+        "text": "Check Valve Plug",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "module": "Terminology",
+    "image": "/assets/module_1/grease_body_lube.jpg",
+    "question": "Name this fitting.",
+    "answer": "Grease Body Lube Fitting",
+    "options": [
+      {
+        "label": "A",
+        "text": "Grease Check Valve",
+        "correct": false
+      },
+      {
+        "label": "B",
+        "text": "Grease Nipple",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "Grease Body Lube Fitting",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "Grease Bleeder Tool",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "module": "Terminology",
+    "image": "/assets/module_1/chicago_fitting.jpg",
+    "question": "Name this fitting.",
+    "answer": "Chicago Fitting",
+    "options": [
+      {
+        "label": "A",
+        "text": "Air Line Regulator",
+        "correct": false
+      },
+      {
+        "label": "B",
+        "text": "Air Chuck",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "FRL",
+        "correct": false
+      },
+      {
+        "label": "D",
+        "text": "Chicago Fitting",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "module": "Terminology",
+    "image": "/assets/module_1/petcock.jpg",
+    "question": "Name this fitting.",
+    "answer": "Petcock",
+    "options": [
+      {
+        "label": "A",
+        "text": "T-Valve",
+        "correct": false
+      },
+      {
+        "label": "B",
+        "text": "Petcock",
+        "correct": true
+      },
+      {
+        "label": "C",
+        "text": "Air Bleeder Fitting",
+        "correct": false
+      },
+      {
+        "label": "D",
+        "text": "Butterfly Valve",
+        "correct": false
+      }
+    ]
+  }
+]

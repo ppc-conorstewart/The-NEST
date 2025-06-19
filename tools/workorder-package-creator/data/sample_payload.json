@@ -1,0 +1,94 @@
+{
+  "customer": "WHITECAP RESOURCES",
+  "location": "11-35-059-19 W5M",
+  "num_wells": 5,
+  "revision": "A",
+  "assigned_base": "RED DEER",
+  "rig_in_date": "June 15, 2025",
+  "company_name_line": "WHITECAP RESOURCES 11-35-059-19 W5M",
+  "num_assemblies": 10,
+
+  "equipment_list": [
+    {
+      "asset_count": 7,
+      "notes": "",
+      "description": "7 1/16-15K VW Hydraulic Gate Valve (FLANGED)"
+    },
+    {
+      "asset_count": 5,
+      "notes": "",
+      "description": "5 1/8-15K VW Hydraulic Gate Valve"
+    }
+  ],
+  "per_set_totals": [
+    {
+      "per_set": 8,
+      "total_min": 40
+    },
+    {
+      "per_set": 8,
+      "total_min": 120
+    }
+  ],
+  "minimum_number_of_sets": 5,
+
+  "bill_of_materials": [
+    {
+      "per_set": 2,
+      "total_min": 1,
+      "description": "2 1/16-15K THRU-FLANGE STUDS/NUTS (7/8-8UN × 6.00″) FOR FRAC BONNET 2″ CONNECTIONS"
+    }
+  ],
+
+  "consumables": [
+    {
+      "description": "1 2″ 1502 SEAL – SPARES",
+      "minimum_needed": 2
+    },
+    {
+      "description": "BX-152 LCS",
+      "minimum_needed": 10
+    }
+  ],
+
+  "work_orders": [
+    {
+      "wo_number": "00",
+      "num_assemblies": 2,
+      "assembly_description": "DFIT TREE – 5 1/8-15K HWO LOWER MASTER, 5 1/8-15K BLIND FLANGE",
+      "layout_note": "THIS WILL COME OFF THE TUBING HEAD, CURRENTLY ON LOCATION, AND\nWILL BE INSTALLED IN THE FIELD",
+      "rows": [
+        {
+          "wo_item_number": 1,
+          "qty": 1,
+          "ring_grooves_inspected": {
+            "yes": false,
+            "no": true
+          },
+          "gaskets_are_stainless_steel": {
+            "yes": true,
+            "no": false
+          },
+          "connections_torqued_to_api": {
+            "yes": false,
+            "no": true
+          },
+          "gate_valve_test_charts_attached": {
+            "yes": false,
+            "no": true
+          },
+          "hydro_static_shell_pressure_test": {
+            "yes": false,
+            "no": true
+          },
+          "equipment_item_description": "WECO FLANGE | 2-1/16″ 15K × 2″ 1502 (F)",
+          "ppc_asset_number": ""
+        }
+      ],
+      "photos": []
+    }
+  ],
+
+  "build_plans": [],
+  "control_panels": []
+}

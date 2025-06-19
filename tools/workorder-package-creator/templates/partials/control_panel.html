@@ -1,0 +1,15 @@
+<div class="page">
+  <!-- fixed include path -->
+  <%- include('partials/header.html') %>
+
+  <h3 style="margin-top: 8px; margin-bottom: 4px;">CONTROL PANEL CHECKLIST</h3>
+
+  <ul class="control-checklist">
+    <% control_panel_checklist.forEach(function(item) { %>
+      <li>
+        <input type="checkbox" <%= item.checked ? 'checked' : '' %> disabled /> 
+        <%= item.description %>
+      </li>
+    <% }); %>
+  </ul>
+</div>

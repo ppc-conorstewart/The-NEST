@@ -1,0 +1,33 @@
+<div class="page">
+  <!-- fixed include path -->
+  <%- include('partials/header.html') %>
+
+  <h3 style="margin-top: 8px; margin-bottom: 4px;">BUILD PLAN</h3>
+
+  <!-- Optional header section -->
+  <% if (build_plan_sections && build_plan_sections.length) { %>
+    <% build_plan_sections.forEach(function(sec) { %>
+      <h4 style="margin-top: 8px;"><%= sec.section_title %></h4>
+      <p><%= sec.instructions %></p>
+    <% }); %>
+  <% } %>
+
+  <table class="table buildplan-table">
+    <thead>
+      <tr>
+        <th>Step</th>
+        <th>Description</th>
+        <th>Time (min)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% work_order_rows.forEach(function(row, idx) { %>
+        <tr>
+          <td><%= idx + 1 %></td>
+          <td><%= row.instruction %></td>
+          <td><%= row.time_minutes %></td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+</div>

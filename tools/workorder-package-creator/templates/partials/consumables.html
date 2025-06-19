@@ -1,0 +1,25 @@
+<div class="page">
+  <!-- fixed include path -->
+  <%- include('partials/header.html') %>
+
+  <h3 style="margin-top: 8px; margin-bottom: 4px;">CONSUMABLES LIST</h3>
+
+  <table class="table consumables-table">
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th>Unit</th>
+        <th>Quantity</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% consumables.forEach(function(cons) { %>
+        <tr>
+          <td><%= cons.item %></td>
+          <td><%= cons.unit %></td>
+          <td><%= cons.quantity %></td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+</div>

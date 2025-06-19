@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Workorder Package</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+
+    <!-- Page 1: Equipment List -->
+    <%
+      // Header variables for Page 1
+      // These variables come directly from your JSON payload
+      // (e.g. payload.company_name_line, payload.equipment_list, etc.)
+      company_name_line        = company_name_line;        // e.g. "WHITECAP RESOURCES 11-35-059-19 W5M"
+      assembly_description     = "EQUIPMENT LIST";
+      equipment_list           = equipment_list;
+      per_set_totals           = per_set_totals;
+      minimum_number_of_sets   = minimum_number_of_sets;
+    %>
+    <%- include('partials/equipment_list.html') %>
+
+    <!-- Page 2: Bill of Materials -->
+    <%
+      // Header variables for Page 2
+      assembly_description = "BILL OF MATERIALS";
+      bill_of_materials    = bill_of_materials;
+    %>
+    <%- include('partials/bill_of_materials.html') %>
+
+    <!-- Page 3: Consumables List -->
+    <%
+      // Header variables for Page 3
+      assembly_description = "CONSUMABLES LIST";
+      consumables          = consumables;
+    %>
+    <%- include('partials/consumables.html') %>
+
+    <!-- Work Orders (WO 00 – WO 11) -->
+    <% work_orders.forEach(function(wo) { %>
+      <%
+        // For each Work Order object 'wo':
+        company_name_line    = "WORK ORDER " + wo.wo_number;
+        num_assemblies       = wo.num_assemblies;
+        assembly_description = wo.assembly_description;
+        layout_note          = wo.layout_note || "";
+        work_order_rows      = wo.rows;
+        photos               = wo.photos || [];
+      %>
+      <%- include('partials/work_order.html') %>
+    <% }) %>
+
+    <!-- Build Plans (e.g. WO 08 and WO 09) -->
+    <% build_plans.forEach(function(bp) { %>
+      <%
+        // For each Build Plan object 'bp':
+        company_name_line    = "WORK ORDER " + bp.wo_number;
+        num_assemblies       = bp.num_assemblies;
+        assembly_description = bp.assembly_description;
+        build_plan_sections  = bp.sections;
+        work_order_rows      = bp.rows;
+      %>
+      <%- include('partials/build_plan.html') %>
+    <% }) %>
+
+    <!-- Control Panels (e.g. WO 10 and WO 11) -->
+    <% control_panels.forEach(function(cp) { %>
+      <%
+        // For each Control Panel object 'cp':
+        company_name_line          = "WORK ORDER " + cp.wo_number;
+        num_assemblies             = cp.num_assemblies;
+        assembly_description       = cp.assembly_description;
+        control_panel_checklist    = cp.checklist;
+      %>
+      <%- include('partials/control_panel.html') %>
+    <% }) %>
+
+  </body>
+</html>

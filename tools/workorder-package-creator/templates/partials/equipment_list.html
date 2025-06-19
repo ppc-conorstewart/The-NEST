@@ -1,0 +1,56 @@
+<!-- templates/partials/equipment_list.html -->
+
+<div class="page">
+  <!-- Include the shared header partial (no “partials/” prefix) -->
+  <%- include('header.html') %>
+
+  <!-- Equipment List Title -->
+  <h3 style="margin-top: 8px; margin-bottom: 4px;">ASSETS – EQUIPMENT LIST</h3>
+
+  <table style="width: 100%; border-collapse: collapse;">
+    <thead>
+      <tr>
+        <th style="border: 1px solid #000; padding: 4px;">PART #</th>
+        <th style="border: 1px solid #000; padding: 4px;">DESCRIPTION</th>
+        <th style="border: 1px solid #000; padding: 4px;">QTY/SET</th>
+        <th style="border: 1px solid #000; padding: 4px;">TOTAL QTY</th>
+        <th style="border: 1px solid #000; padding: 4px;">UOM</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% 
+        // Loop through each object in equipment_list array.
+        equipment_list.forEach(function(e, i) { 
+      %>
+        <tr style="<%= (i % 2 === 0) ? 'background-color: #f9f9f9;' : '' %>">
+          <td style="border: 1px solid #000; padding: 4px;">
+            <%= e.part_number %>
+          </td>
+          <td style="border: 1px solid #000; padding: 4px;">
+            <%= e.description %>
+          </td>
+          <td style="border: 1px solid #000; padding: 4px; text-align: right;">
+            <%= e.qty_per_set %>
+          </td>
+          <td style="border: 1px solid #000; padding: 4px; text-align: right;">
+            <%= e.qty_per_set * minimum_number_of_sets %>
+          </td>
+          <td style="border: 1px solid #000; padding: 4px; text-align: center;">
+            <%= e.uom %>
+          </td>
+        </tr>
+      <% }) %>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="2"
+            style="border: 1px solid #000; padding: 4px; font-weight: bold; text-align: right;">
+          TOTAL SETS:
+        </td>
+        <td colspan="3" style="border: 1px solid #000; padding: 4px; text-align: left;">
+          <%= minimum_number_of_sets %>
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+</div>

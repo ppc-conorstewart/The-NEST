@@ -1,0 +1,38 @@
+<div class="page">
+  <!-- fixed include path -->
+  <%- include('partials/header.html') %>
+
+  <% if (layout_note) { %>
+    <p style="font-style: italic;"><%= layout_note %></p>
+  <% } %>
+
+  <table class="table workorder-table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Component</th>
+        <th>Qty per Assembly</th>
+        <th>Total Qty</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% work_order_rows.forEach(function(row, idx) { %>
+        <tr>
+          <td><%= idx + 1 %></td>
+          <td><%= row.component %></td>
+          <td><%= row.qty_per_assembly %></td>
+          <td><%= row.qty_per_assembly * num_assemblies %></td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+
+  <% if (photos && photos.length) { %>
+    <div class="photos">
+      <h4 style="margin-top: 8px;">PHOTOS:</h4>
+      <% photos.forEach(function(url) { %>
+        <img src="<%= url %>" style="width: 150px; margin: 4px;" />
+      <% }); %>
+    </div>
+  <% } %>
+</div>

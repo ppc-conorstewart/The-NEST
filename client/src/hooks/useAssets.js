@@ -8,7 +8,7 @@ export default function useAssets() {
   const fetchAssets = useCallback(async () => {
     setLoading(true);
     try {
-      const res = await fetch('http://localhost:3001/api/assets', {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/api/assets`, {
         credentials: 'include',
       });
       const data = await res.json();

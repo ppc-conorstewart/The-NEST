@@ -209,14 +209,14 @@ export default function FlyHQ() {
         items: selectedAssetIds.map((id) => ({ id, name: assetNameMap[id] })),
         newLocation,
       };
-      const res = await fetch('http://localhost:3001/api/assets/transfer', {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/api/assets/transfer`, {
         method: 'POST',
         credentials: 'include',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ assetIds: selectedAssetIds, newLocation }),
       });
       if (res.ok) {
-        await fetch('http://localhost:3001/api/activity', {
+        await fetch(`${process.env.REACT_APP_API_URL}/api/activity`, {
           method: 'POST',
           credentials: 'include',
           headers: { 'Content-Type': 'application/json' },

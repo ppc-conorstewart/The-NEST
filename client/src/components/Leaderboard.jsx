@@ -4,7 +4,7 @@ export default function Leaderboard({ onClose }) {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3001/api/leaderboard')
+    fetch(`${process.env.REACT_APP_API_URL}/api/leaderboard`)
       .then(res => res.json())
       .then(setData)
       .catch(err => console.error('Failed to load leaderboard:', err));

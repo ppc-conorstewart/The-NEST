@@ -36,7 +36,7 @@ export default function FlyHQTools() {
   useEffect(() => {
     if (!showSummary) return
 
-    fetch('/api/jobs')
+    fetch(`${process.env.REACT_APP_API_URL}/api/jobs`)
       .then((res) => {
         if (!res.ok) {
           throw new Error(`Jobs fetch failed: ${res.status}`)

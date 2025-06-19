@@ -28,7 +28,7 @@ export default function Analytics() {
   const currentYear = new Date().getFullYear()
 
   useEffect(() => {
-    fetch('http://localhost:3001/api/jobs/monthly-totals')
+    fetch(`${process.env.REACT_APP_API_URL}/api/jobs/monthly-totals`)
       .then(r => r.json())
       .then(data => {
         setSampleLineData(data)

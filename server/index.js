@@ -44,6 +44,10 @@ const jobs        = require('./jobs');
 const sourcing    = require('./sourcing'); // ← Import new sourcing module
 
 const app = express();
+app.use(cors({
+  origin: 'https://thenest-web.onrender.com',  // your front-end URL
+  credentials: true
+}));
 const PORT = process.env.PORT || 3001;
 
 

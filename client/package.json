@@ -64,7 +64,7 @@
     ]
   },
   "devDependencies": {
-    "@craco/craco": "6.1.2",
+    "@craco/craco": "7.0.0",
     "@tailwindcss/cli": "^4.1.8",
     "@tailwindcss/postcss": "^4.1.8",
     "ajv": "^6.12.6",

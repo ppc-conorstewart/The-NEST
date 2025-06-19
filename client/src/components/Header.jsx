@@ -18,7 +18,7 @@ export default function Header() {
   }, [])
 
   const onClickLogin = () => {
-  window.location.href = `${process.env.REACT_APP_BACKEND_URL}/auth/discord`;
+  window.location.href = `${process.env.REACT_APP_API_URL}/auth/discord`;
 }
 
 

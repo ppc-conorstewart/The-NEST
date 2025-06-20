@@ -667,22 +667,24 @@ app.post(
     }
   }
 );
-// 1) Kick off the OAuth flow by sending the browser to Discord
+// 1) Kick off the OAuth flow
 app.get(
   '/auth/discord',
-  passport.authenticate('discord')           // ← this generates the 302 to Discord’s authorize endpoint
+  passport.authenticate('discord')
 );
-// === Discord Login Routes ===
+
+// 2) Handle Discord’s response
 app.get(
   '/auth/discord/callback',
   passport.authenticate('discord', { failureRedirect: '/' }),
   (req, res) => {
-    const user = encodeURIComponent(JSON.stringify(req.user));
-    const redirectURL = `${FRONTEND}/?user=${user}`;
-    console.log('➡️ Redirecting browser to:', redirectURL);
-    res.redirect(redirectURL);
+    // On success, send the user back to your frontend
+    res.redirect(
+      `${FRONTEND}/?user=${encodeURIComponent(JSON.stringify(req.user))}`
+    );
   }
 );
+
 
 
 // …
